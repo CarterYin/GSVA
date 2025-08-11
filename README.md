@@ -15,13 +15,45 @@ conda activate gsva_demo
 pip install -r requirements.txt
 ```
 
-## 模型文件
+## Hugging Face
+
+```bash
+pip install -U huggingface_hub
+```
+
+设置国内镜像站：
+```bash
+export HF_ENDPOINT=https://hf-mirror.com
+```
+
+登陆Hugging Face：
+```bash
+huggingface-cli login
+```
+
+## 下载模型
+```bash
+(gsva_demo) yinchao@ubuntu:~/GSVA$ mkdir -p models
+(gsva_demo) yinchao@ubuntu:~/GSVA$ cd models
+(gsva_demo) yinchao@ubuntu:~/GSVA/models$ git clone https://hf-mirror.com/liuhaotian/llava-llama-2-13b-chat-lightning-preview
+(gsva_demo) yinchao@ubuntu:~/GSVA/models$ git clone https://hf-mirror.com/openai/clip-vit-large-patch14
+(gsva_demo) yinchao@ubuntu:~/GSVA/models$ wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+```
 
 使用前需要准备以下模型文件并放置在models/文件夹下：（注意是models不是model）
 - https://cloud.tsinghua.edu.cn/d/1423fb16fdb9445e8155/
 - https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
 - https://huggingface.co/liuhaotian/llava-pretrain-llama-2-13b-chat
 - https://huggingface.co/openai/clip-vit-large-patch14
+
+### 模型文件下载
+- 可能会遇到无法直接下载到服务器，可以下载到本地后推送到远程服务器
+
+例如：（打开终端后记得先cd到文件的本地目录）
+```bash
+scp gsva-7b-ft-gres.bin y****@*****:/home/yinchao/GSVA/models
+```
+
 
 
 ## 使用方法
