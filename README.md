@@ -49,6 +49,10 @@ huggingface-cli login
 ### 模型文件下载
 - 可能会遇到无法直接下载到服务器，可以下载到本地后推送到远程服务器
 
+```bash
+yinchao@yinchaodeMacBook-Air ~ % wget https://cloud.tsinghua.edu.cn/seafhttp/files/997e42b0-170d-4b5e-bd22-b5088fbe1aa8/gsva-7b-ft-gres.bin
+```
+
 例如：（打开终端后记得先cd到文件的本地目录）
 ```bash
 scp gsva-7b-ft-gres.bin y****@*****:/home/yinchao/GSVA/models
