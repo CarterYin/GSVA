@@ -34,6 +34,9 @@ python demo.py --input_image_path images/real_sample_image.jpg --prompt "white c
 ```bash
 python demo.py --input_image_path images/person_test.jpg --prompt "man in the image" --output_image_path results/man_fixed.png --force_cpu
 ```
+```bash
+python demo.py --input_image_path images/car.jpg --prompt "a blue car" --output_image_path results/car.png --force_cpu
+```
 
 #### 可选参数
 - `--precision`: 推理精度，可选 `fp32`、`bf16`、`fp16` (默认: fp32)
