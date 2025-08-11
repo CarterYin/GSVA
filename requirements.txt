@@ -1,0 +1,29 @@
+# GSVA Demo 依赖包
+# 基于README.md中的依赖列表
+
+# 核心深度学习框架
+torch>=2.4.0
+torchvision>=0.19.0
+transformers>=4.44.2
+
+# 图像处理
+Pillow>=9.0.0
+opencv-python>=4.10.0
+matplotlib>=3.5.0
+
+# 模型相关
+bitsandbytes>=0.43.3
+deepspeed>=0.15.0
+peft>=0.4.0
+timm>=0.6.13
+tokenizers>=0.19.1
+
+# 其他工具(numpy包如有问题可用numpy-1.26.4)
+numpy>=1.21.0
+PyYAML>=6.0.2
+sentencepiece>=0.2.0
+termcolor>=2.4.0
+einops>=0.4.1
+
+# 可选：用于更好的性能
+accelerate>=0.20.0 
